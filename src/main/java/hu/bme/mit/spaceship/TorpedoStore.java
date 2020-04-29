@@ -27,9 +27,11 @@ public class TorpedoStore {
       }
     }
   }
+  //Reviewed by abduyev97 and approved : Random generator has been made global
   Random generator = new Random();
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
+      //Reviewed by abduyev97 and approved : throw has been added
       throw new IllegalArgumentException("numberOfTorpedos");
     }
 
@@ -41,7 +43,9 @@ public class TorpedoStore {
 
     if (r >= FAILURE_RATE) {
       // successful firing
+      //Reviewed by abduyev97 and approved : =- has been fixed
       this.torpedoCount -= numberOfTorpedos;
+
       success = true;
     } else {
       // simulated failure
