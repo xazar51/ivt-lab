@@ -215,7 +215,7 @@ public class GT4500Test {
      }
 
     @Test
-    public void fireTorpedo_Single_Primary_Only_One_Torpedo() { // Coverage for Single fire if(!primaryTorpedoStore.isEmpty())
+    public void fireTorpedo_Single_Primary_Only_One_Torpedo() { // Coverage for Single fire branch if (!primaryTorpedoStore.isEmpty())
         //Arrange
         when(primaryMock.fire(1)).thenReturn(true);
 
